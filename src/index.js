@@ -1,0 +1,11 @@
+// @rchada/dlds — 딜러나라 디자인 시스템 컴포넌트 엔트리.
+// 사용:  import '@rchada/dlds/dlds.css'  +  import '@rchada/dlds/themes/dealernara.css'
+//        import { Button, Card, Input } from '@rchada/dlds'
+export { Button } from './components/Button.jsx'
+export { Input } from './components/Input.jsx'
+export { Card } from './components/Card.jsx'
+export { Chip } from './components/Chip.jsx'
+export { Badge } from './components/Badge.jsx'
+export { Callout } from './components/Callout.jsx'
+export { TrustBar } from './components/TrustBar.jsx'
+export { Sheet } from './components/Sheet.jsx'

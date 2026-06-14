@@ -1,0 +1,29 @@
+{
+  "name": "@rchada/dlds",
+  "version": "0.1.0",
+  "description": "DLDS — 딜러나라 디자인 시스템. 테마러블(CSS변수) 토큰 + React 컴포넌트.",
+  "type": "module",
+  "main": "./dist/dlds.js",
+  "module": "./dist/dlds.js",
+  "exports": {
+    ".": { "import": "./dist/dlds.js" },
+    "./dlds.css": "./src/dlds.css",
+    "./themes/dealernara.css": "./src/themes/dealernara.css",
+    "./themes/carmoim.css": "./src/themes/carmoim.css",
+    "./fonts.css": "./src/fonts.css"
+  },
+  "files": ["dist", "src"],
+  "scripts": {
+    "build": "vite build"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "vite": "^5.4.0"
+  }
+}

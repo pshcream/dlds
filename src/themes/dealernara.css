@@ -1,0 +1,14 @@
+/* 딜러나라 테마 — dlds.css 기본값과 동일(명시적 보관용). */
+:root {
+  --dl-brand: #DD2121;
+  --dl-brand-press: #B81A1A;
+  --dl-brand-tint: #FDECEC;
+  --dl-accent: #FF8A1E;
+  --dl-accent-tint: #FFF3E2;
+  --dl-canvas: #FBF8F6;
+  --dl-ink: #1B1B1F;
+  --dl-sub: #5A5560;
+  --dl-mute: #9A9298;
+  --dl-line: #EFE9E6;
+  --dl-shadow-brand: 0 10px 26px rgba(221, 33, 33, 0.30);
+}

@@ -1,0 +1,14 @@
+/* 차모임 테마 — 같은 컴포넌트를 토스블루/쿨톤으로. (참고/재사용용) */
+:root {
+  --dl-brand: #0064FF;
+  --dl-brand-press: #0050CC;
+  --dl-brand-tint: #E8F0FE;
+  --dl-accent: #0064FF;
+  --dl-accent-tint: #E8F0FE;
+  --dl-canvas: #F9F9F9;
+  --dl-ink: #191F28;
+  --dl-sub: #4E5968;
+  --dl-mute: #8B95A1;
+  --dl-line: #EEF0F3;
+  --dl-shadow-brand: 0 10px 26px rgba(0, 100, 255, 0.25);
+}

@@ -1,0 +1,93 @@
+/* DLDS — 토큰(CSS 변수) + 컴포넌트 클래스. 기본값 = 딜러나라 테마.
+   브랜드 변경은 themes/*.css 로 :root 변수만 덮어쓰면 됨. */
+:root {
+  /* 브랜드 / 액센트 */
+  --dl-brand: #DD2121;
+  --dl-brand-press: #B81A1A;
+  --dl-brand-tint: #FDECEC;
+  --dl-accent: #FF8A1E;        /* 혜택 숫자 전용 */
+  --dl-accent-tint: #FFF3E2;
+  /* 표면 / 잉크 (웜 중립) */
+  --dl-canvas: #FBF8F6;
+  --dl-card: #FFFFFF;
+  --dl-tint: #F4EEEB;
+  --dl-ink: #1B1B1F;
+  --dl-sub: #5A5560;
+  --dl-mute: #9A9298;
+  --dl-line: #EFE9E6;
+  /* 상태 */
+  --dl-ok: #13A36B;
+  --dl-kakao: #FEE500;
+  --dl-kakao-ink: #3C1E1E;
+  --dl-danger: #C0392B;
+  /* 라디우스 */
+  --dl-r-sm: 10px;
+  --dl-r-md: 14px;
+  --dl-r-lg: 18px;
+  --dl-r-pill: 999px;
+  /* 엘리베이션 */
+  --dl-shadow-soft: 0 6px 18px rgba(27, 27, 31, 0.06);
+  --dl-shadow-brand: 0 10px 26px rgba(221, 33, 33, 0.30);
+  /* 폰트 */
+  --dl-font: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', system-ui, sans-serif;
+}
+
+/* ── 버튼 ───────────────────────────────────────────── */
+.dlds-btn {
+  font-family: var(--dl-font);
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  width: 100%; height: 52px; border: none; border-radius: var(--dl-r-md);
+  font-size: 15px; font-weight: 800; letter-spacing: -0.2px; cursor: pointer;
+  transition: transform .12s ease;
+}
+.dlds-btn:active:not(:disabled) { transform: scale(0.97); }
+.dlds-btn:disabled { opacity: .5; cursor: default; }
+.dlds-btn--primary { background: var(--dl-brand); color: #fff; }
+.dlds-btn--primary:active:not(:disabled) { background: var(--dl-brand-press); }
+.dlds-btn--ghost { background: var(--dl-card); color: var(--dl-brand); border: 1.5px solid var(--dl-brand); }
+.dlds-btn--kakao { background: var(--dl-kakao); color: var(--dl-kakao-ink); }
+.dlds-btn--sm { width: auto; height: auto; padding: 9px 16px; border-radius: var(--dl-r-pill); font-size: 13px; font-weight: 700; }
+
+/* ── 입력 ───────────────────────────────────────────── */
+.dlds-input {
+  font-family: var(--dl-font); width: 100%; box-sizing: border-box; height: 50px;
+  padding: 0 14px; border: 1px solid var(--dl-line); border-radius: var(--dl-r-sm);
+  background: var(--dl-card); color: var(--dl-ink); font-size: 15px; outline: none;
+}
+.dlds-input:focus { border-color: var(--dl-brand); }
+.dlds-input::placeholder { color: var(--dl-mute); }
+
+/* ── 카드 ───────────────────────────────────────────── */
+.dlds-card { background: var(--dl-card); border: 1px solid var(--dl-line); border-radius: var(--dl-r-lg); padding: 18px; }
+.dlds-card--soft { box-shadow: var(--dl-shadow-soft); }
+.dlds-card--flat { box-shadow: none; }
+
+/* ── 칩 / 배지 ──────────────────────────────────────── */
+.dlds-chip {
+  font-family: var(--dl-font); display: inline-flex; align-items: center; gap: 4px;
+  padding: 7px 13px; border-radius: var(--dl-r-pill); background: var(--dl-brand-tint);
+  color: var(--dl-ink); font-size: 12.5px; font-weight: 700; border: 1.5px solid transparent; cursor: pointer;
+}
+.dlds-chip--on { background: var(--dl-card); border-color: var(--dl-brand); color: var(--dl-brand); }
+.dlds-badge {
+  display: inline-block; padding: 5px 12px; border-radius: var(--dl-r-pill);
+  background: var(--dl-brand-tint); color: var(--dl-brand); font-size: 11.5px; font-weight: 700;
+}
+
+/* ── 혜택 콜아웃 (앰버 — 혜택 숫자 전용) ─────────────── */
+.dlds-callout { background: var(--dl-accent-tint); border-radius: var(--dl-r-lg); padding: 16px 18px; }
+.dlds-callout__num { font-size: 22px; font-weight: 800; color: var(--dl-accent); letter-spacing: -0.4px; }
+.dlds-callout__label { font-size: 13px; color: var(--dl-sub); }
+
+/* ── 신뢰바 ─────────────────────────────────────────── */
+.dlds-trustbar { display: flex; gap: 8px; }
+.dlds-trustbar__item {
+  flex: 1; display: flex; align-items: center; justify-content: center; gap: 5px;
+  background: var(--dl-card); border: 1px solid var(--dl-line); border-radius: var(--dl-r-md);
+  padding: 9px 6px; font-size: 11.5px; font-weight: 700; color: var(--dl-sub); text-align: center;
+}
+.dlds-trustbar__check { color: var(--dl-brand); }
+
+/* ── 바텀시트 ───────────────────────────────────────── */
+.dlds-sheet-mask { position: fixed; inset: 0; z-index: 60; background: rgba(27,27,31,.45); display: flex; align-items: flex-end; justify-content: center; }
+.dlds-sheet { width: 100%; max-width: 480px; max-height: 88vh; overflow-y: auto; background: var(--dl-card); border-radius: var(--dl-r-lg) var(--dl-r-lg) 0 0; padding: 22px; }

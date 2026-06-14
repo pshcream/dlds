@@ -1,0 +1,3 @@
+/* (선택) Pretendard 웹폰트 로드. CSP에 cdn.jsdelivr.net 허용 필요.
+   앱에서 자체 로드하면 import 불필요. */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css');
